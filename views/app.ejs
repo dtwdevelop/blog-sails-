@@ -10,11 +10,16 @@ Sort by:
 </select>
 
 {{title}}
-<ul>
-    <li ng-repeat="data in news | filter:query | orderBy:orderProp ">
-      <span>{{data.title}}</span>
+<ul ng-repeat="data in news | filter:query | orderBy:orderProp ">
+    <li >
+      <h3>{{data.title}}</h3>
       <p>{{data.text}}</p>
+      <a class="btn "  href="pagenews?id={{data.id}}">Read more ..</a>
     </li>
   </ul>
 
 </div>
+
+
+
+ 

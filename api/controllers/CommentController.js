@@ -9,14 +9,15 @@ module.exports = {
 
 	comment: function (req, res) {
   
-  Comment.find().sort('date DESC').exec(function(err,found){
+  Comment.find().sort('date DESC').paginate({page: 1, limit: 5}).exec(function(err,found){
         if(err)
              return res.serverError(err);
          else{
 
-              return res.view("comment",{comments:found});
+             // return res.view("comment",{comments:found});
+              return res.json(found);
          }
-    
+     
     });
     
   

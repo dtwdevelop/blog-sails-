@@ -10,12 +10,27 @@ App.controller('NewsController', function ($scope,$http) {
 
    $scope.orderProp = 'title';
 
-   $scope.test = function(ev) {
-      alert('test');
-    };
+   // $scope.test = function(ev) {
+   //    alert('test');
+   //  };
+
+ 
+
+});
+
+App.controller('CommentController', function ($scope,$http) {
+  $scope.title="Comment";
+
+ $http.get('/comment').success(function(data) {
+    $scope.comments = data;
+  });
+
+   $scope.orderProp = 'date';
+
+   // 
 
   // $scope.Oderby = function() {
-  // 	   console.log("click");
+  //     console.log("click");
       
   //   };
 

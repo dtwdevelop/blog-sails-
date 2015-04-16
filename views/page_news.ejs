@@ -5,5 +5,18 @@
 <h3><%= info.title %></h3>
 <p><%= info.text %></p>
 </div>
+<hr>
 
+<!-- comment -->
+<div ng-controller="CommentController">
+<ul ng-repeat="comment in comments| orderBy:orderProp ">
+    <li >
+      <span>{{comment.title}}</span>
+      <p>{{comment.topic}}</p>
+      <p>{{comment.date|date}}</p>
+    </li>
+  </ul>
+
+</div>
+<hr>
 <a href="/" class="btn btn-danger">Back </a>
