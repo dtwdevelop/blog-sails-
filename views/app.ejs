@@ -1,0 +1,20 @@
+
+<div ng-controller="NewsController">
+ Search: <input ng-model="query">
+
+Sort by:
+
+<select ng-model="orderProp">
+  <option value="title">Alphabetical</option>
+  <option value="-title">Newest</option>
+</select>
+
+{{title}}
+<ul>
+    <li ng-repeat="data in news | filter:query | orderBy:orderProp ">
+      <span>{{data.title}}</span>
+      <p>{{data.text}}</p>
+    </li>
+  </ul>
+
+</div>

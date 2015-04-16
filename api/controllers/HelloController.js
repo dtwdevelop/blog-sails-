@@ -22,7 +22,10 @@ module.exports = {
   },
   
     
+  index: function (req, res) {
+  
 
+},
 
    list: function (req, res) {
   
@@ -30,8 +33,8 @@ module.exports = {
         if(err)
              return res.serverError(err);
          else{
-
-              return res.view("list",{news:found});
+              return res.json(found);
+             // return res.view("list",{news:found});
          }
     
     });

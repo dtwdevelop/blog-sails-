@@ -35,8 +35,11 @@ module.exports.routes = {
   // '/': {
   //   view: 'homepage'
   // },
-  
-   '/': 'HelloController.list',
+  '/': {
+    view:'app'
+  },
+
+   '/list': 'HelloController.list',
    
     'get /page': 'HelloController.page',
     'get /pagenews': 'HelloController.pagenews',
