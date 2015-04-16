@@ -1,0 +1,18 @@
+<h3>Comment: (<%= comments.length%>)</h3>
+<ul>
+<% comments.forEach(function(c)  { %>
+    <li><%= c.title %> 
+   <p>
+          <%= c.topic %> 
+
+   </p>
+   <p>  <%= c.date.toDateString() %> </p>
+   <hr>
+    </li>
+
+    
+<% }); %>
+<a href="/" class="btn btn-danger">Back</a>
+
+<%- partial('form.ejs',{data:"Add comment"}) %>
+

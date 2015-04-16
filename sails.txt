@@ -1,0 +1,30 @@
+ubuntu
+
+sudo apt-get install python-software-properties python g++ make
+sudo add-apt-repository ppa:chris-lea/node.js
+sudo apt-get update
+sudo apt-get install nodejs
+==================================================
+
+
+npm install forever -g
+
+
+.foreverignore
+
+
+**/.tmp/**
+**/views/**
+**/assets/**
+
+forever -w start app.js
+
+forever stop app.js
+
+=============================
+sudo npm install nodemon -g
+
+nodemon app.js
+----------------------------------
+.nodemonignore
+.tmp/*

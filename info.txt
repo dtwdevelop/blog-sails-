@@ -1,0 +1,7 @@
+sails lift
+
+$ npm install --save cloud-env
+
+git add .
+git commit -m 'My changes'
+git push

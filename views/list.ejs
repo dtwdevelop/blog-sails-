@@ -1,0 +1,17 @@
+<h3>Tops news total: (<%= news.length%>)</h3>
+<ul>
+<% news.forEach(function(data)  { %>
+    <li><%= data.title %> 
+   <p>
+          <%= data.text %> 
+<a class="btn "  href="pagenews?id=<%= data.id %>">Read more ..</a>
+   </p>
+  
+    </li>
+
+    
+<% }); %>
+
+<ul>
+<hr>
+<a href="/comment" class="btn btn-danger">Comments </a>
